@@ -1,0 +1,1 @@
+select c.docid,mat_transpose.col,SUM(c.count *mat_transpose.val) as mcount from Frequency c, mat_transpose where  c.term = mat_transpose.row and c.docid in('q')  group by c.docid,mat_transpose.col order by mcount DESC;
