@@ -1,0 +1,1 @@
+select c.docid,mat_transpose.col,SUM(c.count *mat_transpose.val) from Frequency c, mat_transpose where  c.term = mat_transpose.row and c.docid in('doc1','doc2') and mat_transpose.col in('doc1','doc2') group by c.docid,mat_transpose.col;
